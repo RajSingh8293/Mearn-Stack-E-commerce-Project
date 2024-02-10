@@ -4,7 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 const UserProtected = () => {
   const user = JSON.parse(localStorage.getItem('user'))
 
-  return user?.user ? <Outlet /> : <Navigate to="/login" />
+  return user ? <Outlet /> : <Navigate to="/login" />
 }
 
 export default UserProtected
